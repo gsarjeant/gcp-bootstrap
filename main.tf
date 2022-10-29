@@ -50,7 +50,7 @@ resource "google_kms_crypto_key_iam_binding" "tfstate-key-binding" {
 
 resource "google_service_account" "terraform_service_account" {
   project      = var.project
-  account_id   = "${var.project}-terraform"
+  account_id   = "terraform"
   display_name = "Terraform Service Account"
   description  = "Managed by terraform"
 }
