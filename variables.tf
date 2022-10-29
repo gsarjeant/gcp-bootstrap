@@ -43,7 +43,7 @@ variable "admin_iam_roles" {
 
 variable "max_saved_states" {
   type        = number
-  default     = 50
+  default     = 10
   description = "The maximum number of non-live versions of the state to keep in the cloud storage bucket. Once reached, older versions will be deleted."
 }
 
