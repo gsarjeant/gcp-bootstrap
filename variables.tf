@@ -46,3 +46,8 @@ variable "max_saved_states" {
   default     = 50
   description = "The maximum number of non-live versions of the state to keep in the cloud storage bucket. Once reached, older versions will be deleted."
 }
+
+variable "tfstate_bucket_name" {
+  type        = string
+  description = "The name of the GCP storage bucket that will store terraform remote state."
+}

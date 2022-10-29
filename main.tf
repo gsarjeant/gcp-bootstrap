@@ -56,7 +56,7 @@ resource "google_service_account" "terraform_service_account" {
 }
 
 resource "google_storage_bucket" "terraform_state_storage_bucket" {
-  name                        = "${var.project}_tfstate_storage_bucket"
+  name                        = var.tfstate_bucket_name
   project                     = var.project
   location                    = var.dual_region
   uniform_bucket_level_access = true
