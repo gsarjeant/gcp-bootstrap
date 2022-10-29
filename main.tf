@@ -60,12 +60,7 @@ resource "google_storage_bucket" "terraform_state_storage_bucket" {
   project                     = var.project
   location                    = var.dual_region
   uniform_bucket_level_access = true
-  labels = merge(
-    var.labels,
-    {
-      "name" = "${var.project}_tfstate_storage_bucket"
-    },
-  )
+  labels                      = var.labels
 
   versioning {
     enabled = true
